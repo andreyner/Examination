@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page__body">
+
+  <header class="page__header">
+
+  </header>
+  <main class="page__main page-main">
+    <h1 class="visually-hidden">Тестовые задания"</h1>
+    <section class="page-main__game game">
+      <h2 class="visually-hidden">Игра "5 в ряд"</h2>
+      <div class="wrapper game__wrapper">
+        <div class="game__participants">
+        </div>
+        <table class="game__playing-area playing-area">
+          <tr class="playing-area__row">
+          </tr>
+        </table>
+      </div>
+      </div>
+      <template id="gamer">
+        <div class="game__gamer">
+          <p class="game__gamer-name"></p>
+          <span class="game__gamer-score"></span>
+          <span> ходов</span>
+        </div>
+      </template>
+    </section>
+    <section class="page-main__chart chart">
+      <h2 class="visually-hidden">График по таблице</h2>
+      <div class="chart__wrapper wrapper tabs">
+        <div class="tabs__switch">
+          <div class="tabs__element-title">
+            <input class="tabs__element-radio" type="radio" name="inset" value="" id="tab_1" checked>
+            <label class="tabs__element-label" for="tab_1">Вкладка №1</label>
+          </div>
+          <div class="tabs__element-title">
+            <input class="tabs__element-radio" type="radio" name="inset" value="" id="tab_2">
+            <label class="tabs__element-label" for="tab_2">Вкладка №2</label>
+          </div>
+        </div>
+        <div class="chart__table-area table-area tabs__item">
+          <div class="table-area__form form">
+            <div class="form__setting fieldset">
+              <p><label for="column">Количество часов:</label><input type="number" id="column" required value="1"
+                  min="1" class="form__column-count form__input">
+              </p>
+              <p><label for="row">Количество дней:</label><input type="number" id="row" required value="1" min="1"
+                  class="form__row-count form__input">
+              </p>
+            </div>
+            <div class="fieldset">
+              <table class="table-area__coordinate-table coordinate-table">
+                <tr>
+                  <th class="coordinate-table__title">Время</th>
+                </tr>
+              </table>
+              <template id="coordinate-table-data">
+                <td class="coordinate-table__cell">
+                  <input class="coordinate-table__input" type="number" required value="1">
+                </td>
+                <td class="coordinate-table__title">
+                </td>
+              </template>
+            </div>
+          </div>
+        </div>
+        <div class="chart__drow-area drow-area tabs__item visually-hidden">
+          <div class="drow-area__graph"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+  </footer>
+  <section class="page__congratulations-modal congratulations-modal modal">
+    <h2 class="congratulations-modal__title">Игра окончена!</h2>
+    <p><span class="congratulations-modal__gamer"></span>&nbsp;выйграл</p>
+    <p>Хотите попробовать еще раз?</p>
+    <div class="congratulations-modal__buttons">
+      <button class="congratulations-modal__button-yes">Да</button>
+      <button class="congratulations-modal__button-no">Нет</button>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
